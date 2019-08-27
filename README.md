@@ -1,4 +1,4 @@
-# AWS Client VPN managed via Terraform
+# terraform-aws-client-vpn
 
 This Terraform module manages an AWS Client VPN with mutual authentication.
 
