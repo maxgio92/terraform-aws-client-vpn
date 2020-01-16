@@ -98,7 +98,7 @@ resource "aws_acm_certificate" "client" {
 
 # Endpoint
 
-resource "aws_ec2_client_vpn_endpoint" "wordpress" {
+resource "aws_ec2_client_vpn_endpoint" "default" {
   description            = "terraform-clientvpn-example"
   server_certificate_arn = aws_acm_certificate.server.arn
   client_cidr_block      = var.vpn_cidr
@@ -119,16 +119,16 @@ resource "aws_ec2_client_vpn_endpoint" "wordpress" {
     var.custom_tags,
     {
       Scope = "VPN"
-      Role  = "wordpress"
+      Role  = "default"
     }
   )
 }
 
 # Target networks association
 
-resource "aws_ec2_client_vpn_network_association" "wordpress" {
+resource "aws_ec2_client_vpn_network_association" "default" {
   count                  = length(var.target_network_association_subnet_ids)
-  client_vpn_endpoint_id = aws_ec2_client_vpn_endpoint.wordpress.id
+  client_vpn_endpoint_id = aws_ec2_client_vpn_endpoint.default.id
 
   subnet_id = var.target_network_association_subnet_ids[count.index]
 
