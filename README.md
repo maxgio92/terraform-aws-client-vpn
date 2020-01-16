@@ -1,4 +1,4 @@
-# terraform-aws-client-vpn
+# AWS Client VPN managed via Terraform
 
 This Terraform module manages an AWS Client VPN with mutual authentication.
 
@@ -14,9 +14,9 @@ It requires:
 - CA's private key
 
 Post-apply required steps:
-- Configuration of the Client VPN endpoint's authorization ingress
-- Download of the Client VPN's OpenVPN client config file download
-- Update of the OpenVPN client config file with the client private key and client certificate \*
+- Authorization ingress
+- OpenVPN client config file download
+- OpenVPN client config file update with client private key and certificate \*
 
 \* They can retrieved from the module outputs.
 
