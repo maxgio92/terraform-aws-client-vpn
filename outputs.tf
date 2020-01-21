@@ -9,6 +9,5 @@ output "auth_client_certificate" {
 }
 
 output "target_network_associations_security_groups" {
-  type  = list
   value = aws_ec2_client_vpn_network_association.default.security_groups
 }
