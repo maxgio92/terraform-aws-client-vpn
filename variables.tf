@@ -44,6 +44,12 @@ EOF
 
 }
 
+variable "auth_server_cert_validity_period_hours" {
+  default = 17520
+
+  description = "The validity period in hours of the server certificate"
+}
+
 variable "auth_client_certificate_common_name" {
   description = <<EOF
   The FQDN of the client certificate for the VPN Client
@@ -62,6 +68,12 @@ variable "auth_client_certificate_organization" {
   
 EOF
 
+}
+
+variable "auth_client_cert_validity_period_hours" {
+  default = 17520
+
+  description = "The validity period in hours of the client certificate"
 }
 
 variable "auth_ca_private_key_pem" {
