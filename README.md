@@ -1,4 +1,4 @@
-# AWS Client VPN managed via Terraform
+# [![Actions Status](https://github.com/maxgio92/terraform-aws-client-vpn/workflows/terraform/badge.svg)](https://github.com//maxgio92/terraform-aws-client-vpn/actions) AWS Client VPN managed via Terraform
 
 This Terraform module manages an AWS Client VPN with mutual authentication.
 
@@ -33,8 +33,10 @@ Post-apply required steps:
 |------|-------------|------|---------|:-----:|
 | auth\_ca\_cert\_pem | n/a | `any` | n/a | yes |
 | auth\_ca\_private\_key\_pem | n/a | `any` | n/a | yes |
+| auth\_client\_cert\_validity\_period\_hours | The validity period in hours of the client certificate | `number` | `17520` | no |
 | auth\_client\_certificate\_common\_name | The FQDN of the client certificate for the VPN Client   mutual authentication | `any` | n/a | yes |
 | auth\_client\_certificate\_organization | The organization name of the client certificate   for the VPN Clients mutual authentication" | `string` | `"client"` | no |
+| auth\_server\_cert\_validity\_period\_hours | The validity period in hours of the server certificate | `number` | `17520` | no |
 | auth\_server\_certificate\_common\_name | The FQDN of the server certificate for the VPN Client   mutual authentication | `any` | n/a | yes |
 | auth\_server\_certificate\_organization | The organization name of the server certificate   for the VPN Clients mutual authentication" | `string` | `"server"` | no |
 | custom\_tags | A map of custom tags to apply to all resources | `map(string)` | `{}` | no |
@@ -49,4 +51,5 @@ Post-apply required steps:
 |------|-------------|
 | auth\_client\_certificate | n/a |
 | auth\_client\_private\_key | n/a |
+| target\_network\_associations\_security\_groups | n/a |
 
