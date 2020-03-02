@@ -44,7 +44,7 @@ EOF
 
 }
 
-variable "auth_server_cert_validity_period_hours" {
+variable "auth_server_certificate_validity_period_hours" {
   default = 17520
 
   description = "The validity period in hours of the server certificate"
@@ -70,7 +70,7 @@ EOF
 
 }
 
-variable "auth_client_cert_validity_period_hours" {
+variable "auth_client_certificate_validity_period_hours" {
   default = 17520
 
   description = "The validity period in hours of the client certificate"

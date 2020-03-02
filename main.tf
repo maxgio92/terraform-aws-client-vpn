@@ -22,7 +22,7 @@ resource "tls_locally_signed_cert" "server" {
   ca_private_key_pem = var.auth_ca_private_key_pem
   ca_cert_pem        = var.auth_ca_cert_pem
 
-  validity_period_hours = var.auth_server_cert_validity_period_hours
+  validity_period_hours = var.auth_server_certificate_validity_period_hours
 
   allowed_uses = [
     "key_encipherment",
@@ -69,7 +69,7 @@ resource "tls_locally_signed_cert" "client" {
   ca_private_key_pem = var.auth_ca_private_key_pem
   ca_cert_pem        = var.auth_ca_cert_pem
 
-  validity_period_hours = var.auth_client_cert_validity_period_hours
+  validity_period_hours = var.auth_client_certificate_validity_period_hours
 
   allowed_uses = [
     "key_encipherment",
