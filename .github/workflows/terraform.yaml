@@ -1,4 +1,4 @@
-name: 'Terraform GitHub Actions'
+name: terraform
 on:
   - push
 #  - pull_request
