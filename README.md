@@ -20,6 +20,11 @@ Post-apply required steps:
 
 \* They can retrieved from the module outputs.
 
+## Ingress authorization
+
+The Ingress Authorization currenlty is not supported and you have to manage it externally in order to start tunneling.
+Anyway there's an open [issue](https://github.com/terraform-providers/terraform-provider-aws/issues/7494) and some [workarounds](https://github.com/terraform-providers/terraform-provider-aws/issues/7494#issuecomment-524831077) available. 
+
 ## Providers
 
 | Name | Version |
